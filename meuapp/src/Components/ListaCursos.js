@@ -2,12 +2,18 @@ import {Text,View, StyleSheet} from "react-native"
 import { FlatList } from "react-native/types_generated/index";
 
 export default function ListaCursos() {
+ const data =["React Native", "Node.js", "MongoDB", "HTML popeto"];
+
   return (
     <View style={estilos.container}>
       <FlatList
+
+      data ={data}
+      renderItem={({item})=>(
+        <Text>-{item}</Text>
+      ) }
       
-        data={["React Native", "Node.js", "MongoDB", "HTML popeto"]}
-        renderItem={({item}) => <Text> -{item}</Text> }
+        
       />
     </View>
     

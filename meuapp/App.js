@@ -1,13 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-
+import Prime from './src/Telas/Prime';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>teste popeto</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <View>
+        <Prime />
+      </View>
+    </>
   );
 }
 
