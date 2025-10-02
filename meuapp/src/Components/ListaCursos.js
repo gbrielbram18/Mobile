@@ -1,33 +1,44 @@
-import {Text,View, StyleSheet} from "react-native"
-import { FlatList } from "react-native/types_generated/index";
+import {  Text, View, StyleSheet, FlatList } from "react-native";
 
 export default function ListaCursos() {
- const data =["React Native", "Node.js", "MongoDB", "HTML popeto"];
+  const data = ["React Native", "Mongo DB", "Express", "Node.js", "C#"];
 
   return (
     <View style={estilos.container}>
-      <FlatList
-
-      data ={data}
-      renderItem={({item})=>(
-        <Text>-{item}</Text>
-      ) }
-      
-        
-      />
+        <FlatList 
+           data={data}
+            renderItem={({ item }) => (
+                <View style={estilos.lastItem}>
+                    <Text style={estilos.bullet}>• </Text>
+                    <Text style={estilos.text}>{item}</Text>
+                </View>
+            )}
+        />
     </View>
-    
   )
 }
 
-
 const estilos = StyleSheet.create({
-  container:{
-    marginTop: 40,
-    padding:20,
-
-
-
-  }
-
+    container: {
+        marginTop: 40,
+        padding: 20,
+    },
+    lastItem: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginBottom: 8,
+        padding: 12,
+        backgroundColor: "orange",
+        borderWidth: 1,
+        borderColor: "gray",
+        borderRadius: 10,
+        elevation: 3
+    },
+    bullet: {
+        fontSize: 20,
+        marginRight: 8,
+    },
+    text: {
+        fontSize: 16,
+    }
 });
