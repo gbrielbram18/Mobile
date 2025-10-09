@@ -1,21 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native';
-import Prime from './src/Telas/Prime';
+import { Text, View, ScrollView } from 'react-native';
+import Header from './src/Components/Header';
 
 export default function App() {
   return (
     <>
-      <View>
-        <Prime />
-      </View>
+      <ScrollView>
+       <Header/>
+      </ScrollView>
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
