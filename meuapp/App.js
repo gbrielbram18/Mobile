@@ -1,15 +1,11 @@
-import { Text, View, ScrollView } from 'react-native';
+import MainNavigator from './MainNavegator';
 import Header from './src/Components/Header';
-import Card from './src/Components/Card';
 
 export default function App() {
   return (
     <>
-    
-      <ScrollView>
-       <Header/>
-       <Card/>
-      </ScrollView>
+      <Header />
+      <MainNavigator />
     </>
   );
 }

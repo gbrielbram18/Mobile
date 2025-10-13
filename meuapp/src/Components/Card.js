@@ -1,45 +1,38 @@
-import React from 'react'
-import { Button, StyleSheet,Text, View } from 'react-native'
+import React from 'react';
+import { Button, View, Text, StyleSheet } from 'react-native'
 
+export default function Card(props) {
 
-export default function Card() {
   return (
     <View style={estilos.container}>
-        <Text style={estilos.cardTitle}>sobre</Text>
-        <Text style={estilos.cardContent}>Saiba mais sobre nós</Text>
+        <Text style={estilos.cardTitle}>{props.title}</Text>
+        <Text style={estilos.cardContent}>{props.content} </Text>
         <Button
-        title="Ir para sobre"
-        onPress={()=> alert("Botão pressionado")}
-        
-
+            title={props.textButton}
+            onPress={props.onPress}
         />
     </View>
   )
 }
 
-
-const estilos =StyleSheet.create({
-    container:{
-        backgroundColor:"#ffff",
-        borderRadius:1.41,
-        shadowColor:'orange',
+const estilos = StyleSheet.create({
+    container: {
+        backgroundColor: "#ffff",
+        borderRadius: 1.41,
+        shadowColor: 'blue',
         shadowOpacity: 0.2,
-        padding:20,
-        margin:20,
-        elevation:3,
+        elevation: 2,
+        padding: 20,
+        margin: 20
+    },
+    cardTitle: {
+        fontSize: 18,
+        fontWeight: "bold",
+        marginBottom: 10
 
     },
-    cardTitle:{
-        fontSize:18,
-        fontWeight:"bold",
-        marginBottom:10,
-
-    },
-    cardContent:{
-        fontSize:14,
-        marginBottom:10,
-
-    },
-    
-
+    cardContent: {
+        fontSize: 14,
+        marginBottom: 10
+    } 
 });
