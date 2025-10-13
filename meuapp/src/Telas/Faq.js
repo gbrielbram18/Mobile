@@ -27,8 +27,7 @@ const estilos = StyleSheet.create({
       fontSize:35
 
     },
-    text: {
-    width: "auto",    
+    text: { 
     padding: 5,
     
     
